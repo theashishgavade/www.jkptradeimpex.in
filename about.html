@@ -82,13 +82,12 @@
                                 <a href="ProArmy.html" class="dropdown-item">Special Forces Uniform</a>
                                 <a href="ProSchool.html" class="dropdown-item">School Uniform</a>
                                 <a href="ProKitchen.html" class="dropdown-item">Kitchen Equipments</a>
-                                
+
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="https://forms.gle/DRqdnFEJAkJZoVVQ8" target="_blank"
-                        class="btn btn-primary py-2 px-4">Careers</a>
+                    <a href="careers.html" class="btn btn-primary py-2 px-4">Careers</a>
                 </div>
             </nav>
 
@@ -124,12 +123,12 @@
                                     src="img/computer.jpg" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded  wow zoomIn" data-wow-delay="0.5s"
-                                    src="img/Gym.jpg" style=" margin-top: -25%;">
+                                <img class="img-fluid rounded  wow zoomIn" data-wow-delay="0.5s" src="img/Gym.jpg"
+                                    style=" margin-top: -25%;">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/Sport.jpg"
-                                    style="margin-bottom: -25%;">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s"
+                                    src="img/Sport.jpg" style="margin-bottom: -25%;">
                             </div>
                         </div>
                     </div>
@@ -278,10 +277,12 @@
                 <!-- Section 3: Our Manufacturing Facility -->
                 <div class="row g-4 mt-5 text-center">
                     <div class="col-lg-12 fade-in-text">
-                        <h1 class="section-title ff-secondary text-primary fw-normal fade-in-text">Our Manufacturing Facility</h1>
+                        <h1 class="section-title ff-secondary text-primary fw-normal fade-in-text">Our Manufacturing
+                            Facility</h1>
 
                         <h5 style="font-style: italic; font-weight: normal;">
-                            <strong style="color: rgb(255, 14, 14);">Our manufacturing facility,</strong> located at Plot No. N-1/1 & N-1/2, Additional Patalganga Industrial
+                            <strong style="color: rgb(255, 14, 14);">Our manufacturing facility,</strong> located at
+                            Plot No. N-1/1 & N-1/2, Additional Patalganga Industrial
                             Area, MIDC, Rasayani, Maharashtra, is equipped with cutting-edge technology and
                             high-precision machinery. Designed to adhere to the highest industry standards, the facility
                             ensures consistent, efficient, and high-quality production. We are committed to innovation
@@ -294,90 +295,90 @@
         </div>
         <!-- About End -->
 
-                <!-- Add the following CSS for animations -->
-                <style>
-                    /* Text animation for fade-in and slide-up */
-                    .fade-in-text {
-                        opacity: 0;
-                        transform: translateY(20px);
-                        transition: opacity 1s ease, transform 1s ease;
+        <!-- Add the following CSS for animations -->
+        <style>
+            /* Text animation for fade-in and slide-up */
+            .fade-in-text {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 1s ease, transform 1s ease;
+            }
+
+            .fade-in-text.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            /* Image animation for scaling and fade-in */
+            .scale-up-img {
+                opacity: 0;
+                transform: scale(0.8);
+                transition: opacity 1s ease, transform 1s ease;
+            }
+
+            .scale-up-img.visible {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            /* Add some different sliding effects */
+            .slide-left {
+                opacity: 0;
+                transform: translateX(-30px);
+                transition: opacity 1s ease, transform 1s ease;
+            }
+
+            .slide-left.visible {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .slide-right {
+                opacity: 0;
+                transform: translateX(30px);
+                transition: opacity 1s ease, transform 1s ease;
+            }
+
+            .slide-right.visible {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            /* Scale image and text */
+            .scale-img {
+                opacity: 0;
+                transform: scale(0.85);
+                transition: opacity 1s ease, transform 1s ease;
+            }
+
+            .scale-img.visible {
+                opacity: 1;
+                transform: scale(1);
+            }
+        </style>
+
+
+        <script>
+
+            const sections = document.querySelectorAll('.fade-in, .scale-up, .fade-in-text, .scale-up-img, .slide-left, .slide-right, .scale-img');
+
+            const observerOptions = {
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
                     }
+                });
+            }, observerOptions);
 
-                    .fade-in-text.visible {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-
-                    /* Image animation for scaling and fade-in */
-                    .scale-up-img {
-                        opacity: 0;
-                        transform: scale(0.8);
-                        transition: opacity 1s ease, transform 1s ease;
-                    }
-
-                    .scale-up-img.visible {
-                        opacity: 1;
-                        transform: scale(1);
-                    }
-
-                    /* Add some different sliding effects */
-                    .slide-left {
-                        opacity: 0;
-                        transform: translateX(-30px);
-                        transition: opacity 1s ease, transform 1s ease;
-                    }
-
-                    .slide-left.visible {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
-
-                    .slide-right {
-                        opacity: 0;
-                        transform: translateX(30px);
-                        transition: opacity 1s ease, transform 1s ease;
-                    }
-
-                    .slide-right.visible {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
-
-                    /* Scale image and text */
-                    .scale-img {
-                        opacity: 0;
-                        transform: scale(0.85);
-                        transition: opacity 1s ease, transform 1s ease;
-                    }
-
-                    .scale-img.visible {
-                        opacity: 1;
-                        transform: scale(1);
-                    }
-                </style>
-
-
-                <script>
-
-                    const sections = document.querySelectorAll('.fade-in, .scale-up, .fade-in-text, .scale-up-img, .slide-left, .slide-right, .scale-img');
-
-                    const observerOptions = {
-                        threshold: 0.5
-                    };
-
-                    const observer = new IntersectionObserver((entries, observer) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('visible');
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    }, observerOptions);
-
-                    sections.forEach(section => {
-                        observer.observe(section);
-                    });
-                </script>
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        </script>
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
